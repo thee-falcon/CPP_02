@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:25:27 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/04 18:49:01 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/04 19:04:33 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
     static const int    _numberOfFractionalBits = 8;
 
     public:
-    // constructor
+    // constructor_
     Fixed();
     // destructor
     ~Fixed();
