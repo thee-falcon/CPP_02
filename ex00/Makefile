@@ -6,11 +6,11 @@
 #    By: omakran <omakran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/01 19:25:34 by omakran           #+#    #+#              #
-#    Updated: 2024/02/01 19:30:07 by omakran          ###   ########.fr        #
+#    Updated: 2024/02/04 18:19:27 by omakran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-EXEC = a.out
+EXEC = Fixed
 
 SRCS = main.cpp Fixed.cpp
 
