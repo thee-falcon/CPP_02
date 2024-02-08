@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:25:25 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/04 19:11:00 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/08 18:06:12 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,23 @@ Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor called" << std::endl;
     this->setRawBits(other.getRawBits());
+}
+
+Fixed& Fixed::operator=(const Fixed& other)
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this != &other)
+        this->_fixedPointNumerValue = other.getRawBits();
+    return (*this);
+}
+
+int Fixed::getRawBits(void) const
+{
+    std::cout << "getRawBits member function called" << std::endl;
+    return (this->_fixedPointNumerValue);
+}
+
+void    Fixed::setRawBits(int const raw)
+{
+    this->_fixedPointNumerValue = raw;
 }
