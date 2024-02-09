@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:25:27 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/08 21:18:55 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/09 15:56:38 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ class Fixed
     // sets the raw value of the fixed-point number.
     void setRawBits( int const raw );
 };
-# endif
+
+#endif
