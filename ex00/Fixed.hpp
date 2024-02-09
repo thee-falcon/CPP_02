@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:25:27 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/09 15:56:38 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/09 16:28:30 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Fixed
     Fixed();
     // destructor
     ~Fixed();
-    // copy destructor: hwa wahd special constructor likan ndiro beh wahd object jdid ka copy dyal wahd object f nafs l class.
+    // copy constructor: hwa wahd special constructor likan ndiro beh wahd object jdid ka copy dyal wahd object f nafs l class.
     Fixed(const Fixed& other);
     // copy assignment operator.
     Fixed& operator=(const Fixed& other);
