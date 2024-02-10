@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 19:16:58 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/09 19:22:17 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/10 22:27:04 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,29 @@ class Fixed
     // friend: It allows non-member functions or 
     // other classes to access private and protected members of a class.
     friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+    // Comparison operators
+    bool operator>(const Fixed& other) const;
+    bool operator<(const Fixed& other) const;
+    bool operator>=(const Fixed& other) const;
+    bool operator<=(const Fixed& other) const;
+    bool operator==(const Fixed& other) const;
+    bool operator!=(const Fixed& other) const;
+    // Arithmetic operators
+    Fixed operator+(const Fixed& other) const;
+    Fixed operator-(const Fixed& other) const;
+    Fixed operator*(const Fixed& other) const;
+    Fixed operator/(const Fixed& other) const;
+    // Increment and Decrement operators
+    Fixed& operator++();    // pre-increment
+    Fixed operator++(int);  // post-increment
+    Fixed& operator--();    // pre-decrement
+    Fixed operator--(int);  // post-decrement
+    // Static member functions
+    static Fixed& min(Fixed &a, Fixed &b);
+    static const Fixed& min(const Fixed &a, const Fixed &b);
+    static Fixed& max(Fixed &a, Fixed &b);
+    static const Fixed& max(const Fixed &a, const Fixed &b);
+
 };
 
 #endif
