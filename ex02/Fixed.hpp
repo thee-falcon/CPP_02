@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 19:16:58 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/10 22:27:04 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/11 16:22:17 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ class Fixed
     public:
     // constructors
     Fixed( void );
-    Fixed (const int num);
-    Fixed (const float num);
+    Fixed ( const int num );
+    Fixed ( const float num );
     // destructor
-    ~Fixed();
+    ~Fixed( void );
     // copy constructor: hwa wahd special constructor likan ndiro beh wahd object jdid ka copy dyal wahd object f nafs l class.
-    Fixed(const Fixed& other);
+    Fixed( const Fixed& other );
     // copy assignment operator.
-    Fixed& operator=(const Fixed& other);
+    Fixed& operator=( const Fixed& other );
     // returns the raw value of the fixed-point value.
     int getRawBits( void ) const;
     // sets the raw value of the fixed-point number.
@@ -40,33 +40,31 @@ class Fixed
     float toFloat( void ) const;
     // converts the fixed-point value to an integer value.
     int toInt( void ) const;
-    //  overload of the insertion («) operator
-    // friend: It allows non-member functions or 
-    // other classes to access private and protected members of a class.
-    friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
     // Comparison operators
-    bool operator>(const Fixed& other) const;
-    bool operator<(const Fixed& other) const;
-    bool operator>=(const Fixed& other) const;
-    bool operator<=(const Fixed& other) const;
-    bool operator==(const Fixed& other) const;
-    bool operator!=(const Fixed& other) const;
+    bool operator>( const Fixed& other ) const;
+    bool operator<( const Fixed& other ) const;
+    bool operator>=( const Fixed& other ) const;
+    bool operator<=( const Fixed& other ) const;
+    bool operator==( const Fixed& other ) const;
+    bool operator!=( const Fixed& other ) const;
     // Arithmetic operators
     Fixed operator+(const Fixed& other) const;
     Fixed operator-(const Fixed& other) const;
     Fixed operator*(const Fixed& other) const;
     Fixed operator/(const Fixed& other) const;
     // Increment and Decrement operators
-    Fixed& operator++();    // pre-increment
-    Fixed operator++(int);  // post-increment
-    Fixed& operator--();    // pre-decrement
-    Fixed operator--(int);  // post-decrement
+    Fixed& operator++( void );    // pre-increment
+    Fixed operator++( int );  // post-increment
+    Fixed& operator--( void );    // pre-decrement
+    Fixed operator--( int );  // post-decrement
     // Static member functions
-    static Fixed& min(Fixed &a, Fixed &b);
-    static const Fixed& min(const Fixed &a, const Fixed &b);
-    static Fixed& max(Fixed &a, Fixed &b);
-    static const Fixed& max(const Fixed &a, const Fixed &b);
+    static Fixed& min( Fixed &a, Fixed &b );
+    static const Fixed& min( const Fixed &a, const Fixed &b );
+    static Fixed& max( Fixed &a, Fixed &b );
+    static const Fixed& max( const Fixed &a, const Fixed &b );
 
 };
+    // overload of the insertion («) operator
+    std::ostream& operator<<( std::ostream& os, const Fixed& fixed );
 
 #endif

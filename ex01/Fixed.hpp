@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:00:49 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/09 16:45:01 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/11 16:23:07 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,8 @@ class Fixed
     float toFloat( void ) const;
     // converts the fixed-point value to an integer value.
     int toInt( void ) const;
-    //  overload of the insertion («) operator
-    // friend: It allows non-member functions or 
-    // other classes to access private and protected members of a class.
-    friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
+    //  overload of the insertion («) operator
+    std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
